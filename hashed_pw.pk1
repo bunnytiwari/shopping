@@ -1,0 +1,34 @@
+
+import pickle
+from pathlib import Path
+import streamlit_authenticator as stauth
+
+# User data
+names = ["shraddha", "shruti"]
+usernames = ["shrad", "shru"]
+passwords = ["shrad123", "shru123"]
+
+# Generate hashed passwords
+hashed_passwords = stauth.Hasher(passwords).generate()
+
+# Specify the file path
+file_path = Path(__file__).parent / "hashed_pw.pk1"
+
+try:
+    # Write the hashed passwords to the file
+    with file_path.open("wb") as file:
+        pickle.dump(hashed_passwords, file)
+    print("Hashed passwords saved successfully.")
+except Exception as e:
+    print("Error saving hashed passwords:", e)
+
+    
+try:
+    # Write the hashed passwords to the file
+    with file_path.open("wb") as file:
+        pickle.dump(hashed_passwords, file)
+    print("Hashed passwords saved successfully.")
+except Exception as e:
+    print("Error saving hashed passwords:", e)
+    
+
