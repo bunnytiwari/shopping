@@ -3,9 +3,6 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
-import pickle
-from pathlib import Path
-import streamlit_authenticator as stauth
 import plotly.graph_objects as go
 import seaborn as sns
 from streamlit_option_menu import option_menu
